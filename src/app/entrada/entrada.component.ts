@@ -1,16 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { usuario } from 'src/clases/usuario';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-entrada',
+  templateUrl: './entrada.component.html',
+  styleUrls: ['./entrada.component.css']
 })
-export class AppComponent {
-  title = 'loginregistro';
-  
+export class EntradaComponent implements OnInit {
 
-  /*
   listaUsuarios = new Array<usuario>();
 
   constructor() {
@@ -23,7 +20,12 @@ export class AppComponent {
     this.listaUsuarios.push( new usuario( "mariano", "aaa"));
     this.listaUsuarios.push( new usuario( "edgardo", "5555"));
 
-    this.grabarLocalStorage();
+    //this.grabarLocalStorage();
+  }
+  ngOnInit() {
+    throw new Error("Method not implemented.");
+
+
   }
 
   /*
@@ -45,19 +47,14 @@ export class AppComponent {
   }*/
 
   
-  /*
+  
    grabarLocalStorage() {
    //  let user = new usuario("RAMON", "1234");
     // localStorage.setItem("usuario", JSON.stringify( user));
    
     for(let i =0; i < this.listaUsuarios.length; i++) {
-      localStorage.setItem( i + "", JSON.stringify(this.listaUsuarios[i] ) );
+      localStorage.setItem( this.listaUsuarios[i].nombre + "", JSON.stringify(this.listaUsuarios[i] ) );
     }
-
-
   }
-*/
-
-
 
 }

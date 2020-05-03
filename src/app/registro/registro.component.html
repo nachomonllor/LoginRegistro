@@ -1,0 +1,23 @@
+
+<body>
+    
+      <form class="modal-content animate" >
+        
+        <div class="container">
+          <label><b>Nombre</b></label>
+
+          <input type="text" placeholder="nombre" [(ngModel)]=  "entraNombre"  name="nombre" required>
+    
+          <label><b>Clave</b></label>
+
+          <input type="password" placeholder="clave" [(ngModel)]=  "entraClave"  name="clave" required>
+    
+          <div class="clearfix">
+            <button type="submit" (click) = "RegistraUsuario()" class="signupbtn">Registrarme</button>
+          </div>
+
+        </div>
+      </form>
+     
+      
+</body>
